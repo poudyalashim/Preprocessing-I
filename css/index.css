@@ -153,25 +153,28 @@ header nav {
   margin: 20px 0px;
   padding: 0px 90px;
   border: 1px solid black;
-  background: #92b9b9;
+  background: #ffffcc;
 }
 header nav a {
   padding: 30px;
   color: black;
   font-size: 2rem;
 }
-.man-code img {
+.man-code {
   display: flex;
   justify-content: center;
+  border: 1px solid red;
   height: 40vh;
-  width: 40vw;
+  width: 100%;
+  background-image: url("../image/code-man.jpg");
+  background-size: contain;
 }
 .top-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 4em;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 .top-section h1 {
   color: orange;
@@ -209,6 +212,7 @@ header nav a {
   flex-direction: column;
   align-items: center;
   margin-left: 45px;
+  padding: 0px 25px;
   border: 1px solid red;
 }
 .main-section .bottom-section h1 {
