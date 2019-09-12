@@ -139,8 +139,6 @@ body {
 .container {
   width: 880px;
   margin: 0 auto;
-  border: 1px solid blue;
-  background: #e6e6e6;
 }
 /****************** Navigation **************************/
 header {
@@ -153,7 +151,7 @@ header nav {
   margin: 20px 0px;
   padding: 0px 90px;
 }
-header nav a {
+header a {
   padding: 30px;
   color: black;
   font-size: 2rem;
@@ -161,7 +159,6 @@ header nav a {
 .man-code {
   display: flex;
   justify-content: center;
-  border: 1px solid red;
   height: 40vh;
   width: 100%;
   background-image: url("../image/code-man.jpg");
@@ -193,9 +190,22 @@ header nav a {
   border: 1px solid black;
   background: #e6ffff;
 }
+@media (max-width: 500px) {
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    margin: 0 auto;
+  }
+}
 .main-section .middle-section {
-  border: 1px solid red;
   text-align: right;
+}
+@media (max-width: 500px) {
+  .main-section .middle-section {
+    margin-bottom: 30px;
+  }
 }
 .main-section .middle-section h1 {
   font-size: 4rem;
@@ -212,9 +222,13 @@ header nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 45px;
+  margin-left: 25px;
   padding: 0px 25px;
-  border: 1px solid red;
+}
+@media (max-width: 500px) {
+  .main-section .bottom-section {
+    margin-left: 45px;
+  }
 }
 .main-section .bottom-section h1 {
   font-size: 4rem;
@@ -241,4 +255,19 @@ header nav a {
 }
 .main-footer :nth-child(4) {
   margin-bottom: 40px;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header nav a {
+    padding: 10px;
+  }
 }
