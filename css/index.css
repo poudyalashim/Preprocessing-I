@@ -140,7 +140,7 @@ body {
   width: 880px;
   margin: 0 auto;
   border: 1px solid blue;
-  background: #e0ebeb;
+  background: #e6e6e6;
 }
 /****************** Navigation **************************/
 header {
@@ -152,8 +152,6 @@ header nav {
   vertical-align: top;
   margin: 20px 0px;
   padding: 0px 90px;
-  border: 1px solid black;
-  background: #ffffcc;
 }
 header nav a {
   padding: 30px;
@@ -177,12 +175,15 @@ header nav a {
   margin: 20px 0px;
 }
 .top-section h1 {
-  color: orange;
+  color: #262626;
+  font-family: cursive;
   margin-bottom: 10px;
 }
 .top-section p {
   margin: 0px 10px;
   padding: 0px 55px;
+  color: #1a1a1a;
+  font-size: 2rem;
 }
 .main-section {
   display: flex;
@@ -223,4 +224,21 @@ header nav a {
 }
 .main-section .bottom-section p {
   text-align: center;
+}
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  padding: 15px;
+}
+.main-footer h2 {
+  font-size: 3rem;
+  text-decoration: underline;
+}
+.main-footer p {
+  text-align: center;
+}
+.main-footer :nth-child(4) {
+  margin-bottom: 40px;
 }
