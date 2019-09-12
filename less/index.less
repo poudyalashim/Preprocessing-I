@@ -51,6 +51,19 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+@backgroundcontainer:#FCF5F4;
+@allParagraph:#1a1a1a;
+
+.font(){
+	font-size: 3rem;
+}
+
+.bring(){
+	display: flex;
+	justify-content: center;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -58,42 +71,52 @@ table {
 html, body {
 	height: 100%;
 	font-size: 62.5%;
-	line-height: 1.6;
+	line-height: 1.4;
 }	
-
-
 
 .container {
 	width: 880px;
 	margin: 0 auto;
+	background: @backgroundcontainer;
+
+	@media (max-width: 500px){
+		width: 80%;
+		margin: 0 auto;
+	}
 }
 
 /****************** Navigation **************************/
 
 header {
-	display: flex;
-	justify-content: center;
+	.bring();
 
 	nav {
 		display: flex;
 		vertical-align: top;
 		margin: 20px 0px;
 		padding: 0px 90px;
-	}
 
+	@media (max-width: 500px){
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%
+	}
+	
 	a {
 		padding: 30px;
 		color: black;
 		font-size: 2rem;
+
+	@media (max-width: 500px){
+		padding: 10px;
+	}
+	}
 	}
 }
 
-
-
-
 .man-code {
-	display: flex;
-	justify-content: center;
+	.bring();
 	height: 40vh;
 	width: 100%;
 	background-image: url("../image/code-man.jpg");
@@ -104,8 +127,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 4em;
 	margin: 20px 0px;
+	.font();
 
 	h1 {
 		color: #262626;
@@ -116,14 +139,13 @@ header {
 	p {
 		margin: 0px 10px;
 		padding: 0px 55px;
-		color: #1a1a1a;
+		color: @allParagraph;
 		font-size: 2rem;
 	}
 }
 
 .main-section {
-	display: flex;
-	justify-content: center;
+	.bring();
 	font-size: 4em;
 	margin: 40px;
 	border: 1px solid black;
@@ -136,28 +158,26 @@ header {
 		padding: 25px;
 		margin: 0 auto;
 	}
-}
 
-.main-section .middle-section{
-	// margin-right: 50%;
+	.middle-section{
 		text-align: right;
 
 	@media (max-width: 500px){
 		margin-bottom: 30px;
 	}
-}
+	h1{
+		font-size: 4rem;
+		padding: 10px 5px;
+		text-decoration: underline;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+	}
 
-.main-section .middle-section h1{
-	font-size: 4rem;
-	padding: 10px 5px;
-	text-decoration: underline;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.main-section .middle-section ul li{
-	padding: 15px 25px 15px 25px;
-	text-align: center;
-	font-size: 2rem;
+	ul li{
+		padding: 15px 25px 15px 25px;
+		text-align: center;
+		font-size: 2rem;
+	}
+	}
 }
 
 .main-section .bottom-section{
@@ -166,23 +186,21 @@ header {
 	align-items: center;
 	margin-left: 25px;
 	padding: 0px 25px;
-	// text-align: left;
-
+	
 	@media(max-width: 500px){
 		margin-left: 45px;
 	}
 
 	h1 {
 		font-size: 4rem;
-	padding: 10px 5px;
-	text-decoration: underline;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+		padding: 10px 5px;
+		text-decoration: underline;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 	}
 	p {
 		text-align: center;
 	}
-
-	}
+}
 
 .main-footer {
 	display: flex;
@@ -202,21 +220,3 @@ header {
 	}
 }
 
-
-@media (max-width: 500px){
-
-	.container {
-		width: 80%;
-		margin: 0 auto;
-	}
-	header nav{
-		display:flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%
-	}
-
-	header nav a{
-		padding: 10px;
-	}
-}

@@ -134,11 +134,18 @@ html,
 body {
   height: 100%;
   font-size: 62.5%;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 .container {
   width: 880px;
   margin: 0 auto;
+  background: #FCF5F4;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 /****************** Navigation **************************/
 header {
@@ -151,10 +158,23 @@ header nav {
   margin: 20px 0px;
   padding: 0px 90px;
 }
-header a {
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+header nav a {
   padding: 30px;
   color: black;
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 10px;
+  }
 }
 .man-code {
   display: flex;
@@ -168,8 +188,8 @@ header a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 4em;
   margin: 20px 0px;
+  font-size: 3rem;
 }
 .top-section h1 {
   color: #262626;
@@ -255,19 +275,4 @@ header a {
 }
 .main-footer :nth-child(4) {
   margin-bottom: 40px;
-}
-@media (max-width: 500px) {
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  header nav a {
-    padding: 10px;
-  }
 }
